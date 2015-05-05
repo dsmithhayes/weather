@@ -23,8 +23,8 @@ $json = json_decode($json);
 
 curl_close($ch);
 
-echo "Hey Dave, the " . $json->weather[0]->description . " and ";
-echo "it is " . ($json->main->temp - 272.15) . " (C) degrees in ";
+echo $json->weather[0]->description . "\n";
+echo ($json->main->temp - 272.15) . " (C) degrees in ";
 echo $json->name . " right now.\n";
 
 ?>
